@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+}
+
+header {
+  display: flex; /* 한줄 수평 정렬 */
+  justify-content: space-between; /* 사이에 여백 넣기 */
+  align-items: center; /* 수직  정렬 */
+  padding: 1rem 15rem 1rem 15rem; /* top right bottm left, 1rem은 16패딩값 적용임 */
+}
+
+.header_left h3 {
+  display: inline;
+  font-family: "Dancing Script", cursive;
+  font-size: 1.8rem;
+  font-style: italic;
+  border-left: 2px solid black;
+  padding-left: 1rem; /* 여백 주기 */
+}
+.header_left {
+  display: flex;
+}
+
+hr {
+  margin: 0rem; /* 경계선 굵기 지정 */
+}
+
+i {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem; /*전체 I에 주는 방법*/
+}
+
+.fa-instagram {
+  font-size: 3rem;
+}
+.far.fa-heart {
+  margin-right: 0.8rem; /*따로 주는 방법*/
+}
+
+main {
+  background-color: #efefef;
+  height: 100%;
+}
+
+.intro div {
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
+.pic {
+  border-radius: 100%; /*수치 커지면 커질수록 원형 */
+  width: 160px;
+  height: 160px;
+}
+
+.intro img {
+  margin-right: 5vw;
+}
+
+.intro h1 {
+  display: inline;
+}
+
+.num {
+  display: flex;
+}
+
+.num p {
+  margin-right: 1rem;
+}
+
+.story {
+  display: flex;
+  padding: 3rem 20rem 3rem 20rem;
+}
+
+.story div {
+  margin-left: 1rem;
+  text-align: center;
+}
+
+.story img {
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+}
+
+.body_text {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  margin: auto; /* justify를 이미 써서 center를 못사용할시에 margin 값 auto로 가운데 정렬 가능 */
+  border-top: 1px solid rgb(197, 197, 197); /* 경계선 추가값*/
+  padding-top: 2rem;
+}
+
+.records {
+  display: grid; /*인스타에서 사진들 격자 형식으로 전시할때 명령어 */
+  grid-template-columns: 300px 300px 300px; /*grid 행 3개의 열을 300px로 만들겠다*/
+  grid-template-rows: repeat(
+    3,
+    300px
+  ); /*grid 열 300px이 3번 반복된다 이 값은 위의 값과 동일함*/
+  row-gap: 1rem; /* 행단위 간격 */
+  column-gap: 1rem; /* 열단위 간격 */
+  justify-content: center; /* grid에서도 사용 가능 */
+  padding: 1rem 10rem 1rem 10rem;
+}
+
+.records img {
+  height: 300px;
+  width: 300px;
+}
+
+@media (max-width: 1024px) {
+  .header_middle {
+    display: none;
+  }
+}
